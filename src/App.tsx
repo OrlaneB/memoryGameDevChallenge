@@ -20,10 +20,14 @@ function App() {
   return (
     <>
 
+
+
       <Header gameStarted={gameStarted} setCardOrder={setCardOrder} setGameStarted={setGameStarted} setTurnsNumber={setTurnsNumber} turnsNumber={turnsNumber} setTurnedCards={setTurnedCards} />
       <Cards gameStarted={gameStarted} setGameStarted={setGameStarted} cardOrder={cardOrder} setTurnsNumber={setTurnsNumber} turnsNumber={turnsNumber} turnedCards={turnedCards} setTurnedCards={setTurnedCards} />
 
-      
+      {!gameStarted && turnsNumber===0 &&
+        <p>Click on start to play</p>
+      }
 
       {!gameStarted && turnsNumber>0 &&
         <div>
