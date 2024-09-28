@@ -21,9 +21,11 @@ export default function Cards({gameStarted,cardOrder,setTurnsNumber,turnsNumber}
     const [clickEnabled,setClickEnabled] = useState<boolean>(true);
 
     function handleClick(cardIndex:number,cardValue:number){
+        if(!clickEnabled) return;
 
         if(turnedCards.filter(b=>b===true).length%2){
 
+            setClickEnabled(false);
             console.log("second card")
             let newArray:boolean[] = [...turnedCards];
             newArray[cardIndex] = true;
@@ -39,6 +41,7 @@ export default function Cards({gameStarted,cardOrder,setTurnsNumber,turnsNumber}
             setTurnedCards(newArray);
 
             setFirstCard({value:cardValue,index:cardIndex});
+            
         }
     }
 
@@ -49,6 +52,7 @@ export default function Cards({gameStarted,cardOrder,setTurnsNumber,turnsNumber}
                 newArray[firstCard.index] = false;
                 newArray[secondCard.index] = false;
                 setTurnedCards(newArray);
+                setClickEnabled(true);
             },2000)
         }
         
