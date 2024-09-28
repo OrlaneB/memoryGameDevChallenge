@@ -1,14 +1,15 @@
 .card {
-    width:90px;
-    height:90px;
+    width:100%;
+    aspect-ratio: 1/1;
     background-color: white;
     border-radius: 3px;
+    margin: auto;
+    display: flex;
+    padding: 20px;
 }
 
 .turnedCard {
     background-color: #fbcf41;
 }
 
-.card img {
-    width:100%;
-}
+

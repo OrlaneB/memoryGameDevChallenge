@@ -1,15 +1,26 @@
 // import React from 'react'
+import "../styles/Header.css"
 
 type AppProps = {
     setCardOrder: React.Dispatch<React.SetStateAction<number[]>>;
     setGameStarted : React.Dispatch<React.SetStateAction<boolean>>;
+    setTurnsNumber : React.Dispatch<React.SetStateAction<number>>;
+    setTurnedCards : React.Dispatch<React.SetStateAction<boolean[]>>;
     turnsNumber : number;
+    gameStarted:boolean;
   }
 
-export default function Header({ setCardOrder, setGameStarted, turnsNumber}: AppProps) {
+export default function Header({ setCardOrder, setGameStarted, turnsNumber,gameStarted,setTurnsNumber,setTurnedCards}: AppProps) {
     
 
     function createGame(){
+
+      if(gameStarted){
+        setCardOrder([]);
+        setTurnsNumber(0);
+        setTurnedCards([false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]);
+      }
+
         let randomNumbers:number[] = [];
 
         while(randomNumbers.length < 16){
@@ -31,9 +42,10 @@ export default function Header({ setCardOrder, setGameStarted, turnsNumber}: App
     
 
   return (
-    <>
+    <div id="header">
         <p>Turns : {turnsNumber}</p>
-        <button onClick={()=>createGame()}>Start</button>
-    </>
+        <h1>Memory Game</h1>
+        <button onClick={()=>createGame()}>{gameStarted?"Restart":"Start"}</button>
+    </div>
   )
 }

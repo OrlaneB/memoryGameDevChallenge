@@ -1,0 +1,7 @@
+#cardGrid {
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    justify-content: center;
+    gap:30px 80px;
+    margin-bottom: 40px;
+}
