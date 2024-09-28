@@ -12,7 +12,7 @@ export default function Card({value,turned}: Props) {
 
   return (
     <div className={turned?"card":"turnedCard card"}>
-        {turned && <img src={`./src/assets/cardverso-${value+1}.png`} />}
+        {turned && <img src={`/assets/cardverso-${value+1}.png`} />}
     </div>
   )
 }
