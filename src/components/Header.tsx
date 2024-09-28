@@ -15,11 +15,10 @@ export default function Header({ setCardOrder, setGameStarted, turnsNumber,gameS
 
     function createGame(){
 
-      if(gameStarted){
         setCardOrder([]);
         setTurnsNumber(0);
         setTurnedCards([false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]);
-      }
+
 
         let randomNumbers:number[] = [];
 

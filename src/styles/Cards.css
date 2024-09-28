@@ -5,3 +5,11 @@
     gap:30px 80px;
     margin-bottom: 40px;
 }
+
+@media screen and (max-width:600px) {
+    #cardGrid {
+        grid-template-columns: repeat(4,8%);
+        gap:10px 50px;
+        justify-content: normal;
+    }
+}
