@@ -1,0 +1,14 @@
+.card {
+    width:90px;
+    height:90px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.turnedCard {
+    background-color: #fbcf41;
+}
+
+.card img {
+    width:100%;
+}

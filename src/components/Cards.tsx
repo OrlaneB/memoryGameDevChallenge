@@ -54,6 +54,8 @@ export default function Cards({gameStarted,cardOrder,setTurnsNumber,turnsNumber}
                 setTurnedCards(newArray);
                 setClickEnabled(true);
             },2000)
+        } else {
+            setClickEnabled(true);
         }
         
         setTurnsNumber(turnsNumber+1);
@@ -62,7 +64,7 @@ export default function Cards({gameStarted,cardOrder,setTurnsNumber,turnsNumber}
     }
 
   return (
-    <div style={{display:"grid", gridTemplateColumns:"repeat(5,1fr)",gap:"20px"}}>
+    <div style={{display:"grid", gridTemplateColumns:"repeat(4,1fr)",gap:"20px"}}>
         {gameStarted &&
             cardOrder.map((value,index)=>(
                 <div onClick={()=>handleClick(index,value)} key={index}>

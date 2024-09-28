@@ -1,4 +1,5 @@
 // import React from 'react'
+import "../styles/Card.css"
 
 type Props = {
     value:number;
@@ -10,9 +11,9 @@ export default function Card({value,turned}: Props) {
 
 
   return (
-    <div>
-        {turned && <p>{value}</p>}
-        {!turned && <p>off</p>}
+    <div className={turned?"card":"turnedCard card"}>
+        {turned && <img src={`src/assets/cardverso(${value+1}).png`} />}
+        {/* {!turned && <p>off</p>} */}
     </div>
   )
 }

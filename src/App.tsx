@@ -18,6 +18,7 @@ function App() {
     <>
       <Header setCardOrder={setCardOrder} setGameStarted={setGameStarted} turnsNumber={turnsNumber}/>
       <Cards gameStarted={gameStarted} cardOrder={cardOrder} setTurnsNumber={setTurnsNumber} turnsNumber={turnsNumber}/>
+      <a href="https://www.flaticon.com/free-stickers/botanical" title="botanical stickers">Botanical stickers created by Stickers - Flaticon</a>
     </>
   )
 }

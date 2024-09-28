@@ -12,8 +12,8 @@ export default function Header({ setCardOrder, setGameStarted, turnsNumber}: App
     function createGame(){
         let randomNumbers:number[] = [];
 
-        while(randomNumbers.length < 20){
-            let num:number = Math.floor(Math.random() * 20);
+        while(randomNumbers.length < 16){
+            let num:number = Math.floor(Math.random() * 19);
             if(!randomNumbers.includes(num)) {
                 randomNumbers.push(num);
                 randomNumbers.push(num);
