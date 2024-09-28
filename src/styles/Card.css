@@ -12,4 +12,8 @@
     background-color: #fbcf41;
 }
 
-
+@media screen and (max-width:600px) {
+    .card {
+        padding: 0;
+    }
+}
