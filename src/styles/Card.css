@@ -8,6 +8,10 @@
     padding: 20px;
 }
 
+.card img {
+    width:100%;
+}
+
 .turnedCard {
     background-color: #fbcf41;
 }
